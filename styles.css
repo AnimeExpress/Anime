@@ -1,0 +1,162 @@
+:root {
+    --dark-bg: #111111;
+    --dark-text: #ffffff;
+    --light-bg: #ffffff;
+    --light-text: #000000;
+    --accent-color: #0000ff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.light-mode {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+header {
+    padding: 20px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title-container {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--accent-color);
+    font-size: 2.2rem;
+}
+
+.description {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle {
+    padding: 8px 15px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.theme-toggle:hover {
+    opacity: 0.8;
+}
+
+.banner-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.header-banner {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.header-banner:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ad-section {
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px dashed var(--accent-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.top-ad {
+    margin-top: 0;
+}
+
+.bottom-ad {
+    margin-bottom: 0;
+}
+
+.content-container {
+    margin: 30px 0;
+}
+
+.downloads-section {
+    margin-top: 30px;
+}
+
+.download-item {
+    background-color: rgba(0, 0, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+}
+
+.download-item:hover {
+    transform: translateX(5px);
+}
+
+.download-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--accent-color);
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .header-controls {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
